@@ -1,0 +1,416 @@
+<html>
+	<head>
+		<title>
+			Shree Harsha Sridharamurthy
+		</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
+<style type="text/css">
+			*{
+				font-family: 'Open Sans', sans-serif;
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			body{
+				width:100%;
+				margin:auto;
+			}
+
+            body > div {
+                float:left;
+                margin:auto;
+                width:100%;
+            }
+
+			a:link{
+				color:rgb(56, 12, 56);
+				text-decoration: none;
+			}
+
+			#mnHdrDiv div{
+				margin-top:3%;
+				margin-bottom:3%;
+			}
+			#hdrDiv{
+				text-align:center;
+			}	
+			#nmDiv{
+				text-transform: uppercase;
+				font-size:40px;
+			}
+			#hdrlnksDiv{
+				width:100%;
+				/*background-color:#3c353a;*/
+				padding:4px;
+			}
+			#hdrlnksDiv > ul{
+				list-style-type:none;
+				min-height:60px;
+				width:100%;
+			}	
+			/*#hdrlnksDiv > center > ul > li{
+				display:inline-block;
+				margin:0;
+			}
+			#hdrlnksDiv > center > ul > li >a:link{
+				text-decoration:none;
+				color:gray;
+				text-transform: uppercase;
+				min-height:30px;
+				padding:20px;
+				text-align:center;
+			}
+			#hdrlnksDiv > center > ul > li >a:link:hover{
+				color:black;
+				text-decoration:underline;
+			}*/
+
+
+
+
+			/*#hdrlnksDiv > center > nav{
+				display:inline-block;
+				margin:0;
+			}*/
+
+			#hdrlnksDiv > nav >a:link{
+				text-decoration:none;
+				/*color:gray;*/
+				text-transform: uppercase;
+				min-height:30px;
+				padding:20px;
+				text-align:center;
+			}
+
+			#hdrlnksDiv > nav > a:link:hover{
+				color:black;
+				/*text-decoration:underline;*/
+				border-bottom:5px solid gray;
+			}
+
+			.floatLeft{
+				float:left;
+			}
+
+			.floatRight{
+				float:right;
+			}
+
+			#contentDiv{
+				display:flex;
+				margin:auto;
+                margin-top:40px;
+				width:75%;
+                overflow-y: hidden;
+                float:none;
+                text-align: justify;
+			}
+
+			#contentDiv > div {
+				/*width:100%;
+                overflow-y: hidden;
+                display:inline-block;*/
+			}
+
+			#photoDiv{
+				background-image:url('images/photo.jpg');
+				border-radius:50%;
+				width:150px;
+				height:150px;
+				background-size:contain;
+				background-repeat: no-repeat;
+				margin-right:50px;
+			}
+
+			#introDiv{
+				line-height:35px;
+				clear:right;
+			}
+
+			#introDiv > p{
+				margin-bottom: 30px;
+			}
+
+			#footer{
+				/*position:fixed;
+				bottom:0px;*/
+				min-height:30px;
+				/*background-color:rgba(56, 12, 56, 0.54);*/
+				width:100%;
+			}
+
+			div.ftrIcnDv {
+				/*background-size: contain;*/
+				background-image: url('images/social.png');
+				width:50px;
+				height:50px;
+				display:inline-block;
+				margin-top:5px;
+				background-repeat:no-repeat;
+			}
+
+			#fbFtrDiv{
+				background-position-x: 5px;
+				background-position-y: 0px;
+			}
+
+			#lnFtrDiv{
+				background-position-x: -265px;
+				background-position-y: 0px;
+			}
+
+			#ghFtrDiv{
+				background-position-x: -158px;
+				background-position-y: 0px;
+			}
+
+			#igFtrDiv{
+				background-position-x: -375px;
+				background-position-y: 0px;
+			}
+
+			#twFtrDiv{
+				background-position-x: -50px;
+				background-position-y: 0px;
+			}
+            .clearBoth{
+                clear:both;
+            }
+
+            .underLine{
+                text-decoration: underline;
+            }
+
+#pdfDiv{
+margin:auto;
+padding-bottom:5%;
+}
+			#linkPdf{
+				display:block;
+				z-index:0;
+				width:105px;
+				height: 20px;
+				padding: 30px;
+				color: white;
+				font-weight:bold;
+				/*background-color: cornflowerblue;*/
+				background-color:rgba(56, 12, 56, 0.54);
+				border-radius:3px;
+				margin:auto;
+			}
+
+            #imgCntnrDiv{
+                width:100%;
+/*                height:400px !important;*/
+		margin-bottom:1%;
+            }
+
+            #imgDiv{
+                background-image:url('images/IMG_0267.JPG');
+		width:100%;
+                height:300px;
+		background-size:cover;
+		background-repeat:no-repeat;
+		position:relative;
+            }
+
+#labelDiv{
+width:300px;
+display:flex;
+position: absolute;
+left:38%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+div.label{
+display:inline-block;
+vertical-align:center;
+text-align:center;
+color:white;
+font-weight:bold;
+border:5px solid white;
+margin-left:5px;
+margin-right:5px;
+float:left;
+width:300px;
+background-color:gray;
+cursor:pointer;
+}
+
+
+#prjHldr{
+/*	width:80%;*/
+	margin:auto;
+}
+
+div.prjDiv{
+	min-height:30%;
+	width:24%;
+	margin:50px;
+	float:left;
+	text-align:center;
+}
+
+div.prjDiv  h3{
+	color:#6a2576;
+}
+
+div.prjDiv  img{
+	display:block;
+	width:100px;
+	height:100px;
+	margin:auto;
+	margin-bottom:40px;
+}
+
+#afflDiv h3{
+margin:auto;
+}
+
+div.afflHdrDiv{
+/*float:left;*/
+margin:auto;
+text-align:center;
+}
+
+div.cmpnyDiv, div.orgDiv{
+	min-height:30%;
+	width:24%;
+	margin:50px;
+	float:left;
+	text-align:center;
+}
+
+div.cmpnyDiv  h3, div.afflHdrDiv h3{
+	color:#6a2576;
+}
+
+div.cmpnyDiv  img{
+	display:block;
+	width:200px;
+	height:100px;
+	margin:auto;
+	margin-bottom:40px;
+}
+
+div.orgDiv  img{
+	display:block;
+	width:100px;
+	height:100px;
+	margin:auto;
+	margin-bottom:40px;
+}
+
+#cntctDiv{
+margin:50px;
+margin-left:30%;
+margin-right:30%;
+}
+
+
+#cntctDiv p{
+margin:auto;
+}
+video{
+  -moz-transform:rotate(270deg);
+  -webkit-transform:rotate(270deg);
+  -o-transform:rotate(270deg);
+  -ms-transform:rotate(270deg);
+  transform:rotate(270deg);
+}
+div.label{
+cursor:default;
+}
+
+div.label:hover{
+background-color:white;
+color:black;
+}
+#hdrlnksDiv > nav :nth-child(1) {
+				background-color:rgba(56, 12, 56, 0.54);
+				color:white;
+			}
+
+			#hdrlnksDiv > nav :nth-child(1):link:hover{
+				border:none;
+			}
+			
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-83912099-1', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
+</style>
+	</head>
+	<body>
+        <div id="mnHdrDiv">
+			<div id="hdrDiv">
+				<div id="nmDiv"><a href="#">Shree Harsha Sridharamurthy</a></div>
+
+				<div id="hdrlnksDiv">
+					<nav>
+						<a href="index.html">Home</a>
+						<a href="projects.html">Projects</a>
+						<a href="affiliations.html">Affiliations</a>
+						<a href="contact.html">Contact</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+        <div id="imgCntnrDiv">
+            <div id="imgDiv">
+					<div id="labelDiv">
+						<div class="label">Software Engineer</div>
+						<div class="label">Full Stack Developer</div>
+					</div>
+
+		</div>
+        </div>
+		<div id="contentDiv">
+			<div>
+				<div id="photoDiv" class="floatLeft"></div>
+			</div>
+			<div>
+				<div id="introDiv">
+					<p>
+						Shree Harsha is a graduate student of computer science at School of Informatics and Computing, Indiana University. He has been part of the IT industry as a professional software engineer for over 6 years developing enterprise front-end, back-end and full stack applications.
+					</p>
+					<p>
+						Having worked with multinational companies such as <a href="http://www.pfizer.com/" style="color:black" target="_blank">Pfizer Inc.</a>, <a href="http://www.infosys.com/" style="color:black" target="_blank">Infosys Ltd.</a> and <a href="http://www.tcs.com/" style="color:black" target="_blank">Tata Consultancy Ltd.</a>, Shree joined academia to learn intelligent software development and now works as a Graduate Research Assistant to <a class="underLine" href="http://www.szattari.com" target="_blank"><strong>Dr. Shahzeen Attari</strong></a> (School of Public and Environmental Affairs) and <a class="underLine" target="_blank" href="http://mediaschool.indiana.edu/profile/?p=sellers"> <strong>Prof. Mike Sellers </strong></a>(Media School).
+					</p>
+					<p>
+						Shree has received many awards progressing through his career, some of them being Most Valuable Player (MVP) from Infosys, promotion from Tata Consultancy Services and also research and development grant for the ongoing research project WaterWorks.
+					</p>
+				</div>
+			</div>
+            <br class="clearBoth"/>
+		</div>
+		<div id="pdfDiv" style="display:none;visibility:hidden">
+			<a id="linkPdf" href="files/cv.pdf" download="Shree Harsha.pdf" target="_blank" style="display:none;visibility:hidden">Download CV</a>
+		</div>
+		<div id="footer">
+			<center>
+				<nav>
+					<a href="https://www.facebook.com/shreeharshas" target="_blank"><div id="fbFtrDiv" class="ftrIcnDv"></div></a>
+					<a href="https://www.linkedin.com/in/sshreeharsha" target="_blank"><div id="lnFtrDiv" class="ftrIcnDv"></div></a>
+					<a href="https://www.github.com/shreeharshas" target="_blank"><div id="ghFtrDiv" class="ftrIcnDv"></div></a>
+					<a href="https://www.instagram.com/shreeharshas" target="_blank"><div id="igFtrDiv" class="ftrIcnDv"></div></a>
+					<a href="https://www.twitter.com/shreeharsha_s" target="_blank"><div id="twFtrDiv" class="ftrIcnDv"></div></a>
+				</nav>
+			</center>
+		</div>
+	</body>
+</html>
