@@ -1,0 +1,87 @@
+h1#homeHeading{
+	color:#FFFFFF;
+	max-width:95%;
+	text-transform:uppercase;
+	/*background-color:rgba(0,0,0,0.95);*/
+	border-left:0;
+	border-radius:30px;
+	margin-left:1%;
+}
+
+p#custom_p_tag{
+	color:#FFFFFF;
+	/*background-color:rgba(0,0,0,0.95);*/
+	max-width:80%;
+	border-radius:30px;
+}
+
+p.text-faded a:link,p.text-faded a:link:hover,
+p.text-faded a:link:focus,p.text-faded a:link:visited, 
+p.text-faded a:link:active{
+	color: white;
+	text-weight:bold;
+}
+
+a#services img{
+	width:50px;
+	height:50px;
+}
+
+div#custom_dvarw, div#custom_dvarw2{
+	margin-top:50px;
+}
+
+div#custom_dvarw2{
+	margin-bottom:50px;
+}
+
+section#affiliations div.service-box{
+	padding-bottom:10%;
+}
+
+img.custom_img_gitbtn{
+	opacity:0.8;
+	border-radius:1%;
+}
+img.custom_img_gitbtn:hover{
+	opacity:1;
+}
+
+div#footer{
+	padding-top:30px;
+	padding-bottom:0px;
+}
+
+div#footer img{
+	margin-left:10px;
+	margin-right:10px;
+	width:40px;
+	height:40px;
+}
+
+p#custom_cpyrght{
+/*	position:fixed;
+	bottom:0;
+	text-align:center;
+	margin-left:auto;*/
+	margin-top:40px;
+}
+
+img.custom_cnct_icons{
+	width:60px;
+	height:60px;
+}
+
+span#custom_email_anchr{
+	color:white !important;
+}
+
+span#custom_email_anchr:hover{
+	text-decoration:underline;
+}
+
+iframe.custom_iframe_cv{
+	width:100%;
+	overflow-x:;
+	min-height:600px;
+}
