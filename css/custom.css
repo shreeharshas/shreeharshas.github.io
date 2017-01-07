@@ -1,3 +1,6 @@
+frameset{
+	display:inline;
+}
 h1#homeHeading{
 	color:#FFFFFF;
 	max-width:95%;
