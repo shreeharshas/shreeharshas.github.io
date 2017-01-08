@@ -87,7 +87,7 @@ iframe.custom_iframe_cv{
 	min-height:70%;
 }
 div#custom_modal_resume{
-	min-height:70%;
+	min-height:700px;
 }
 @media screen and (min-width: 768px) {
 	
