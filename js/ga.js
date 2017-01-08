@@ -8,8 +8,12 @@
 
 $( document ).ready(function() {      
     var isMobile = window.matchMedia("only screen and (max-width: 760px)");
-
-    if (isMobile.matches) {
-        window.location.replace("shreeharshas.github.io")
+	if (isMobile.matches) {
+        window.location.replace("shreeharshas.github.io");
     }
+	
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		window.location.replace("shreeharshas.github.io");
+	}
+    
  });
