@@ -89,3 +89,8 @@ iframe.custom_iframe_cv{
 div#custom_modal_resume{
 	min-height:70%;
 }
+@media screen and (min-width: 768px) {
+	
+	div.modal-dialog  {width:900px;}
+
+}
