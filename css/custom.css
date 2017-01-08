@@ -86,3 +86,6 @@ iframe.custom_iframe_cv{
 	width:100%;
 	min-height:70%;
 }
+div#custom_modal_resume{
+	min-height:70%;
+}
