@@ -82,3 +82,7 @@ span#custom_email_anchr{
 span#custom_email_anchr:hover{
 	text-decoration:underline;
 }
+iframe.custom_iframe_cv{
+	width:100%;
+	min-height:70%;
+}
