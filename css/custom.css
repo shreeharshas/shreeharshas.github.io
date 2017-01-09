@@ -119,7 +119,7 @@ div#custom_modal_resume{
 div.custom_query_form{
 	margin:auto;
 }
-
+img#custom_img_icon_form{width:auto;}
 div.custom_form_div label{
 	float:left;
 }
