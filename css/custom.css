@@ -160,3 +160,6 @@ iframe#custom_g_form{
 div.form-group{
 	display:table-row;
 }
+p#custom_p_msg{
+	display:inline;
+}

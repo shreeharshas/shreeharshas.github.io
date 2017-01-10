@@ -1,5 +1,8 @@
+$("#custom_alert_div").hide();
 var message = "";
 $("#sendMessage").on("click", function() {
+	$("#contactform").hide();
+	$("#custom_alert_div").show();
 	message = $("#contactform").serialize();
 	$.ajax({
 		url: "//formspree.io/sridhash@iu.edu", 
@@ -7,7 +10,10 @@ $("#sendMessage").on("click", function() {
 		data: {message: message},
 		dataType: "json"
 	});
-	//alert('Thanks for the email, I\'ll be in touch promptly.');
-	$("#msgDeliveredDiv").text('Thanks, I\'ll revert soon!');
 	return false;
+});
+
+$("#custom_alert_div").on("click", function(){
+	$("#contactform").show();
+	$(this).hide();	
 });
