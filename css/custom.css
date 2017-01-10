@@ -124,7 +124,7 @@ div#custom_modal_resume{
 div.custom_query_form{
 	margin:auto;
 }
-
+img#custom_img_icon_form{width:auto;}
 div.custom_form_div label{
 	float:left;
 }
@@ -150,9 +150,12 @@ div.freebirdFormviewerViewFormBanner {
 div.custom_query_form{
 	/*min-height:400px;*/
 }
+iframe#custom_iframe_cv{
+	min-height:700px;
+}
 iframe#custom_g_form{
 	/*width:100%;*/
-	min-height:400px;
+	min-height:700px;
 }
 div.form-group{
 	display:table-row;
