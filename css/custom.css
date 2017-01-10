@@ -11,6 +11,14 @@ h1#homeHeading{
 	margin-left:1%;
 }
 
+
+div.custom_head_img_div{
+    background-image: url('../img/profile_pic.jpg');
+	width:310px;
+	height:300px;
+	border-radius:50%;
+	margin:auto;
+}
 p#custom_p_tag{
 	color:#FFFFFF;
 	/*background-color:rgba(0,0,0,0.95);*/
@@ -92,9 +100,6 @@ img.custom_cnct_icons{
 	width:60px;
 	height:60px;
 }
-img#custom_img_icon_form{
-	width:120px;
-}
 
 span.custom_cnct_anchr{
 	color:white !important;
@@ -110,11 +115,11 @@ iframe.custom_iframe_cv{
 div#custom_modal_resume{
 	min-height:700px;
 }
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
 	
 	div.modal-dialog  {width:900px;}
 
-}
+}*/
 
 div.custom_query_form{
 	margin:auto;
@@ -148,4 +153,7 @@ div.custom_query_form{
 iframe#custom_g_form{
 	/*width:100%;*/
 	min-height:400px;
+}
+div.form-group{
+	display:table-row;
 }
