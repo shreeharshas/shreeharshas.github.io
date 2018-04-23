@@ -5,7 +5,7 @@ $("#sendMessage").on("click", function() {
 	$("#custom_alert_div").show();
 	message = $("#contactform").serialize();
 	$.ajax({
-		url: "//formspree.io/sridhash@iu.edu", 
+		url: "//formspree.io/sridhash@gmail.com", 
 		method: "POST",
 		data: {message: message},
 		dataType: "json"
