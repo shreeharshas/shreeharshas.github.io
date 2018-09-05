@@ -115,11 +115,10 @@ iframe.custom_iframe_cv{
 div#custom_modal_resume{
 	min-height:700px;
 }
-/*@media screen and (min-width: 768px) {
-	
-	div.modal-dialog  {width:900px;}
 
-}*/
+@media (max-width: @screen-xs-min) {
+	.modal-xs { width: @modal-sm; }
+}
 
 div.custom_query_form{
 	margin:auto;
