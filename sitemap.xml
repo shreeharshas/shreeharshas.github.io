@@ -11,16 +11,4 @@
   <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
-<url>
-  <loc>http://www.shreeharsha.me/files/ShreeHarsha_Sridharamurthy_CV.pdf</loc>
-  <lastmod>2018-04-22T03:24:34+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.20</priority>
-</url>
-<url>
-  <loc>http://www.shreeharsha.me/files/ShreeHarsha_Sridharamurthy_CV.htm</loc>
-  <lastmod>2018-09-22T03:24:34+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
 </urlset>
