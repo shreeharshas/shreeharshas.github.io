@@ -146,9 +146,9 @@ div.freebirdFormviewerViewFormBanner {
 	height:0 !important;
 }
 
-div.custom_query_form{
-	/*min-height:400px;*/
-}
+/*div.custom_query_form{
+	min-height:400px;
+}*/
 iframe#custom_iframe_cv{
 	min-height:700px;
 }

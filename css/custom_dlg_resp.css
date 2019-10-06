@@ -199,37 +199,12 @@ body{    background-color: #ffffff;
     clear:both
 }
 
-.obj_1,.obj_2,.obj_3,.obj_4,.obj_5,.obj_6,.obj_7,.obj_8,.obj_9,.obj_10,.obj_11,.obj_12,.obj_13,.obj_14,.obj_15,.obj_16,.obj_17,
-.obj_18,.obj_20,.obj_21,.obj_22,.obj_24,.obj_25,.obj_26,.obj_27,.obj_28,.obj_29,.obj_30,.obj_31,.obj_33,.obj_34,.obj_35,.obj_36,
-.obj_37,.obj_38,.obj_39,.obj_41,.obj_42,.obj_44,.obj_45,.obj_46,.obj_47,.obj_48,.obj_49,.obj_50,.obj_51,.obj_52,.obj_53,.obj_56,
-.obj_57,.obj_58,.obj_59,.obj_60,.obj_61,.obj_62,.obj_64,.obj_65,.obj_66,.obj_67,.obj_68,.obj_69,.obj_71,.obj_72,.obj_73,.obj_74,
-.obj_75,.obj_77,.obj_78,.obj_79,.obj_80,.obj_81,.obj_82,.obj_83,.obj_84,.obj_86,.obj_87,.obj_89,.obj_90,.obj_91,.obj_92,.obj_93,
-.obj_95,.obj_96,.obj_97,.obj_98,.obj_100,.obj_101,.obj_102,.obj_103,.obj_105,.obj_106,.obj_107,.obj_108,.obj_109,.obj_110,
-.obj_111,.obj_113,.obj_114,.obj_115,.obj_116,.obj_117,.obj_118,.obj_120,.obj_121,.obj_122,.obj_124,.obj_125,.obj_126,.obj_127,
-.obj_129,.obj_130,.obj_132,.obj_133,.obj_134,.obj_135,.obj_136,.obj_138,.obj_139,.obj_140,.obj_141,.obj_142,.obj_143,.obj_144,
-.obj_145,.obj_146,.obj_147,.obj_149,.obj_150,.obj_151,.obj_153,.obj_154,.obj_155,.obj_156,.obj_157,.obj_158,.obj_159,.obj_160,
-.obj_161,.obj_162,.obj_163,.obj_164,.obj_165,.obj_166,.obj_167,.obj_168,.obj_169,.obj_170,.obj_171,.obj_172,.obj_173,.obj_174,
-.obj_175,.obj_176,.obj_177,.obj_178,.obj_179,.obj_180,.obj_181,.obj_182,.obj_183,.obj_184,.obj_185,.obj_186,.obj_187,.obj_188,
-.obj_189,.obj_190,.obj_191,.obj_192,.obj_193,.obj_194,.obj_196,.obj_197,.obj_198,.obj_200,.obj_201,.obj_202,.obj_203,.obj_204,
-.obj_205,.obj_207,.obj_208,.obj_209,.obj_210,.obj_211,.obj_212,.obj_214,.obj_215,.obj_216,.obj_217,.obj_218,.obj_219,.obj_221,
-.obj_222,.obj_223,.obj_224,.obj_225,.obj_226,.obj_227,.obj_228,.obj_229,.obj_230,.obj_231,.obj_232,.obj_233,.obj_234,
-.obj_236,.obj_238,.obj_239,.obj_240,.obj_243,.obj_244,.obj_245,.obj_246,.obj_247,.obj_248,.obj_249,.obj_250,.obj_251,
-.obj_252,.obj_253,
 .customFontFamily
 {font-family:'Chrome Sans','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;}
 
-.obj_1,.obj_2,.obj_20,.obj_21,.obj_24,.obj_29,.obj_30,.obj_33,.obj_38,.obj_39,.obj_41,.obj_42,.obj_44,.obj_46,
-.obj_48,.obj_50,.obj_52,.obj_56,.obj_62,.obj_68,.obj_69,.obj_71,.obj_83,.obj_84,.obj_89,.obj_105,.obj_110,.obj_111,
-.obj_129,.obj_130,.obj_135,.obj_136,.obj_140,.obj_141,.obj_142,.obj_143,.obj_146,.obj_147,.obj_160,.obj_161,.obj_164,
-.obj_165,.obj_177,.obj_178,.obj_181,.obj_182,.obj_150, .obj_196,.obj_197,.obj_203,.obj_204,.obj_210,.obj_211,.obj_217,
-.obj_218,.obj_221,.obj_224,.obj_225,.obj_231,.obj_232,.obj_238,.obj_239,.obj_245,.obj_246,.obj_251,
 .fontWeight800
 {font-weight: 800;}
 
-.obj_26,.obj_35,.obj_57,.obj_59,.obj_64,.obj_66,.obj_67,.obj_72,.obj_74,.obj_77,.obj_79,.obj_80,.obj_81,.obj_82,.obj_86,.obj_90,
-.obj_92,.obj_95,.obj_97,.obj_98,.obj_100,.obj_102,.obj_103,.obj_106,.obj_108,.obj_113,.obj_115,.obj_116,.obj_117,.obj_118,.obj_120,
-.obj_122,.obj_124,.obj_126,.obj_127,.obj_132,.obj_134,.obj_138,.obj_144,.obj_145,.obj_149,.obj_153,.obj_157,.obj_158,.obj_167, 
-.obj_168,.obj_174,.obj_175, .obj_184,.obj_185,.obj_190,.obj_191,.obj_193,.obj_194,.obj_200,.obj_207, .obj_214, .obj_228, 
 .fontStyleItalic
 {font-style: italic;}
 
