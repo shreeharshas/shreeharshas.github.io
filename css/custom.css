@@ -195,6 +195,10 @@ a.ftIcon img:active {
   box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
 }
 
+div#contact{
+  padding-bottom: 125px;
+}
+
 * {
   outline: none;
 }
