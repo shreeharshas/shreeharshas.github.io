@@ -2,56 +2,47 @@ frameset {
   display: inline;
 }
 h1#homeHeading {
-  color: #ffffff;
+  color: #fff;
   max-width: 95%;
   text-transform: uppercase;
-  /*background-color:rgba(0,0,0,0.95);*/
   border-left: 0;
   border-radius: 30px;
   margin-left: 1%;
 }
-
 div.custom_head_img_div {
-  background-image: url("../img/profile_pic.jpg");
+  background-image: url(../img/profile_pic.jpg);
   width: 310px;
   height: 300px;
   border-radius: 50%;
   margin: auto;
 }
 p#custom_p_tag {
-  color: #ffffff;
-  /*background-color:rgba(0,0,0,0.95);*/
+  color: #fff;
   max-width: 80%;
   border-radius: 30px;
 }
-
 p.text-faded a:link,
-p.text-faded a:link:hover,
+p.text-faded a:link:active,
 p.text-faded a:link:focus,
-p.text-faded a:link:visited,
-p.text-faded a:link:active {
-  color: white;
-  text-weight: bold;
+p.text-faded a:link:hover,
+p.text-faded a:link:visited {
+  color: #fff;
+  font-weight: 700;
 }
-
 a#services img {
   width: 50px;
   height: 50px;
 }
-
 div#custom_dvarw,
 div#custom_dvarw2 {
   margin-top: 50px;
 }
-
 div#custom_dvarw2 {
   margin-bottom: 50px;
 }
-
 section#affiliations div.service-box {
   padding-bottom: 10%;
 }
-
 img.custom_img_gitbtn {
   opacity: 0.8;
   border-radius: 1%;
@@ -59,31 +50,22 @@ img.custom_img_gitbtn {
 img.custom_img_gitbtn:hover {
   opacity: 1;
 }
-
 div#footer {
   padding-top: 30px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
-
 div#footer img {
   margin-left: 10px;
   margin-right: 10px;
   width: 40px;
   height: 40px;
 }
-
 p#custom_cpyrght {
-  /*	position:fixed;
-	bottom:0;
-	text-align:center;
-	margin-left:auto;*/
   margin-top: 40px;
 }
-
 div.custom_cnct_divs {
   padding-top: 20px;
 }
-
 div.custom_cnct_divs_overlay {
   display: inline-block;
   border-radius: 5%;
@@ -97,31 +79,22 @@ div.custom_cnct_divs_overlay:hover {
   z-index: 2;
   cursor: pointer;
 }
-
 img.custom_cnct_icons {
   width: 60px;
   height: 60px;
 }
-
 span.custom_cnct_anchr {
-  color: white !important;
+  color: #fff !important;
 }
-
 span.custom_cnct_anchr:hover {
   text-decoration: none;
 }
 iframe.custom_iframe_cv {
   width: 100%;
-  /*min-height:700px;*/
 }
 div#custom_modal_resume {
   min-height: 700px;
 }
-/*
-@media (max-width: @screen-xs-min) {
-	.modal-xs { width: @modal-sm; }
-}*/
-
 div.custom_query_form {
   margin: auto;
 }
@@ -131,17 +104,14 @@ img#custom_img_icon_form {
 div.custom_form_div label {
   float: left;
 }
-
 div.custom_form_div input {
   width: 100px;
   margin-left: 30px;
 }
-
 div.custom_form_div textarea {
   width: 500px;
   margin-left: 30px;
 }
-
 div.freebirdFormviewerViewFooterDisclaimer,
 div.freebirdFormviewerViewFooterImageContainer,
 div.freebirdFormviewerViewFormBanner {
@@ -150,15 +120,10 @@ div.freebirdFormviewerViewFormBanner {
   max-width: 0 !important;
   height: 0 !important;
 }
-
-/*div.custom_query_form{
-	min-height:400px;
-}*/
 iframe#custom_iframe_cv {
   min-height: 700px;
 }
 iframe#custom_g_form {
-  /*width:100%;*/
   min-height: 700px;
 }
 div.form-group {
@@ -167,38 +132,31 @@ div.form-group {
 p#custom_p_msg {
   display: inline;
 }
-
 a.ftIcon img:focus {
   opacity: 50%;
 }
-
 a.ftIcon img:hover {
-  background: transparent;
+  background: 0 0;
   height: 100px;
   width: 100px;
   border-radius: 50px;
-  /*margin: 20px;*/
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 1);
+  -moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 1);
 }
-
 a.ftIcon img:active {
   opacity: 50%;
-  background: transparent;
+  background: 0 0;
   height: 100px;
   width: 100px;
   border-radius: 50px;
-  /*margin: 20px;*/
-  -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 1);
+  -moz-box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 1px 0 rgba(0, 0, 0, 1);
 }
-
-div#contact{
+div#contact {
   padding-bottom: 125px;
 }
-
 * {
-  outline: none;
+  outline: 0;
 }
