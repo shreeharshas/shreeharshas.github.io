@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashti Reminder</title>
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiU2hhc2h0aSBSZW1pbmRlciIsInNob3J0X25hbWUiOiJTaGFzaHRpIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwidGhlbWVfY29sb3IiOiIjZmY5ODAwIiwiYmFja2dyb3VuZF9jb2xvciI6IiNmZmY4ZjAiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCM2FXUjBhRDBpTWpRaUlHaGxhV2RvZEQwaU1qUWlJSFpwWlhkQ2IzZzlJakFnTUNBeU5DQXlOQ0lnZG1sc2JEMGlibTl1WlNJK1BHTnBjbU5zWlNCamVEMGlNVElpSUdONVBTSXhNaUlnY2owaU9TSWdabWxzYkQwaUkyWm1PVGd3TUNJZ0x6NDhMM04yWno0PSIsInNpemVzIjoiMjR4MjQiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
+    <meta name="theme-color" content="#ff9800">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff8f0 0%, #ffe5cc 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff9800, #f57c00);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .month-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .month-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #f57c00;
+            transform: translateY(-2px);
+        }
+
+        .current-month {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            min-width: 200px;
+        }
+
+        .shashti-dates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .shashti-card {
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .shashti-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .shukla-paksha {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-left: 5px solid #ff9800;
+        }
+
+        .krishna-paksha {
+            background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+            border-left: 5px solid #3f51b5;
+        }
+
+        .paksha-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .shukla-paksha .paksha-title {
+            color: #f57c00;
+        }
+
+        .krishna-paksha .paksha-title {
+            color: #3f51b5;
+        }
+
+        .date-display {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .date-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .reminder-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .shukla-paksha .reminder-btn {
+            background: #ff9800;
+            color: white;
+        }
+
+        .krishna-paksha .reminder-btn {
+            background: #3f51b5;
+            color: white;
+        }
+
+        .reminder-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .install-prompt {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 10px;
+        }
+
+        .install-btn {
+            background: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .install-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .month-nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .current-month {
+                font-size: 1.5em;
+            }
+            
+            .shashti-dates {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌙 Shashti Reminder</h1>
+            <p>Hindu Lunar Calendar - Karnataka Tradition</p>
+        </div>
+        
+        <div class="content">
+            <div class="month-selector">
+                <div class="month-nav">
+                    <button class="nav-btn" onclick="changeMonth(-1)">← Previous</button>
+                    <div class="current-month" id="currentMonth"></div>
+                    <button class="nav-btn" onclick="changeMonth(1)">Next →</button>
+                </div>
+            </div>
+            
+            <div class="shashti-dates" id="shashtiDates">
+                <!-- Shashti dates will be populated here -->
+            </div>
+            
+            <div class="install-prompt">
+                <h3>📱 Install as App</h3>
+                <p>Add this to your home screen for quick access and notifications!</p>
+                <button class="install-btn" onclick="installApp()">Install App</button>
+            </div>
+            
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentDate = new Date();
+        let deferredPrompt;
+
+        // Lunar calculation functions
+        function getJulianDay(date) {
+            const a = Math.floor((14 - (date.getMonth() + 1)) / 12);
+            const y = date.getFullYear() + 4800 - a;
+            const m = (date.getMonth() + 1) + 12 * a - 3;
+            return date.getDate() + Math.floor((153 * m + 2) / 5) + 365 * y + Math.floor(y / 4) - Math.floor(y / 100) + Math.floor(y / 400) - 32045;
+        }
+
+        function getLunarAge(date) {
+            const julianDay = getJulianDay(date);
+            // Known new moon reference point
+            const knownNewMoon = 2451550.1; // January 6, 2000
+            const lunarCycle = 29.530588853; // Average lunar month length
+            
+            const daysSinceNewMoon = (julianDay - knownNewMoon) % lunarCycle;
+            return daysSinceNewMoon < 0 ? daysSinceNewMoon + lunarCycle : daysSinceNewMoon;
+        }
+
+        function getTithi(date) {
+            const lunarAge = getLunarAge(date);
+            const tithi = Math.floor(lunarAge / (29.530588853 / 30)) + 1;
+            return tithi > 30 ? tithi - 30 : tithi;
+        }
+
+        function findShashtiDates(year, month) {
+            const shashtiDates = [];
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month, day);
+                const tithi = getTithi(date);
+                
+                if (tithi === 6) {
+                    const lunarAge = getLunarAge(date);
+                    const paksha = lunarAge < 14.765 ? 'shukla' : 'krishna';
+                    shashtiDates.push({
+                        date: new Date(date),
+                        paksha: paksha,
+                        tithi: tithi
+                    });
+                }
+            }
+            
+            return shashtiDates;
+        }
+
+        function formatDate(date) {
+            return date.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function updateDisplay() {
+            const monthNames = [
+                'January', 'February', 'March', 'April', 'May', 'June',
+                'July', 'August', 'September', 'October', 'November', 'December'
+            ];
+            
+            document.getElementById('currentMonth').textContent = 
+                `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+            
+            const shashtiDates = findShashtiDates(currentDate.getFullYear(), currentDate.getMonth());
+            const container = document.getElementById('shashtiDates');
+            
+            if (shashtiDates.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #666;">No Shashti dates found in this month.</p>';
+                return;
+            }
+            
+            container.innerHTML = shashtiDates.map(shashti => `
+                <div class="shashti-card ${shashti.paksha}-paksha">
+                    <div class="paksha-title">
+                        ${shashti.paksha === 'shukla' ? '🌕 Shukla Paksha Shashti' : '🌑 Krishna Paksha Shashti'}
+                    </div>
+                    <div class="date-display">
+                        ${shashti.date.getDate()}
+                    </div>
+                    <div class="date-info">
+                        ${formatDate(shashti.date)}
+                    </div>
+                    <button class="reminder-btn" onclick="setReminder('${shashti.date.toISOString()}', '${shashti.paksha}')">
+                        Set Reminder
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function changeMonth(direction) {
+            currentDate.setMonth(currentDate.getMonth() + direction);
+            updateDisplay();
+        }
+
+        function setReminder(dateString, paksha) {
+            const date = new Date(dateString);
+            const pakshaName = paksha === 'shukla' ? 'Shukla Paksha' : 'Krishna Paksha';
+            
+            if ('Notification' in window) {
+                if (Notification.permission === 'granted') {
+                    scheduleNotification(date, pakshaName);
+                } else if (Notification.permission !== 'denied') {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === 'granted') {
+                            scheduleNotification(date, pakshaName);
+                        }
+                    });
+                }
+            } else {
+                showStatus('Notifications not supported in this browser', 'error');
+            }
+        }
+
+        function scheduleNotification(date, pakshaName) {
+            const now = new Date();
+            const timeDiff = date.getTime() - now.getTime();
+            
+            if (timeDiff > 0) {
+                setTimeout(() => {
+                    new Notification(`${pakshaName} Shashti Today! 🌙`, {
+                        body: 'Time for your special meal observation',
+                        icon: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iOSIgZmlsbD0iI2ZmOTgwMCIgLz48L3N2Zz4='
+                    });
+                }, timeDiff);
+                
+                showStatus(`Reminder set for ${pakshaName} Shashti on ${date.toLocaleDateString()}`, 'success');
+            } else {
+                showStatus('This date has already passed', 'error');
+            }
+        }
+
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            setTimeout(() => {
+                status.textContent = '';
+                status.className = 'status';
+            }, 5000);
+        }
+
+        // PWA Installation
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        showStatus('App installed successfully!', 'success');
+                    }
+                    deferredPrompt = null;
+                });
+            } else {
+                showStatus('App already installed or installation not available', 'error');
+            }
+        }
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('data:application/javascript;base64,c2VsZi5hZGRFdmVudExpc3RlbmVyKCdpbnN0YWxsJywgZXZlbnQgPT4geyBzZWxmLnNraXBXYWl0aW5nKCk7IH0pOyBzZWxmLmFkZEV2ZW50TGlzdGVuZXIoJ2FjdGl2YXRlJywgZXZlbnQgPT4geyBldmVudC53YWl0VW50aWwoc2VsZi5jbGllbnRzLmNsYWltKCkpOyB9KTs=')
+                .then(() => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed'));
+        }
+
+        // Initialize
+        updateDisplay();
+
+        // Request notification permission on load
+        if ('Notification' in window && Notification.permission === 'default') {
+            Notification.requestPermission();
+        }
+    </script>
+</body>
+</html>
